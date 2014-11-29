@@ -1,4 +1,4 @@
-This is your new Play application
+LABORATÓRIO 2 da disciplina SISTEMAS DE INFORMAÇÃO 1
 =================================
 
-This file will be packaged with your application, when using `activator dist`.
+Sistema que gerencia as metas semanais de uma pessoa. Aplicação usando o Play! Framework.
