@@ -4,11 +4,14 @@ public class Meta implements Comparable<Meta>{
 
 	private String nome, descricao;
 	private int prioridade;
+	private Semana semana;
 	
-	public Meta(String nome, String descricao, int prioridade){
+	
+	public Meta(String nome, String descricao, int prioridade, Semana semana){
 		this.nome = nome;
 		this.descricao = descricao;
-		this.prioridade =  prioridade;		
+		this.prioridade =  prioridade;
+		this.semana = semana;
 	}
 
 	public String getNome() {
@@ -30,6 +33,19 @@ public class Meta implements Comparable<Meta>{
 	public int getPrioridade() {
 		return prioridade;
 	}
+
+	public void setPrioridade(int prioridade) {
+		this.prioridade = prioridade;
+	}
+	
+	public Semana getSemana() {
+		return semana;
+	}
+
+	public void setSemana(Semana semana) {
+		this.semana = semana;
+	}
+
 
 	@Override
 	public int compareTo(Meta meta) {

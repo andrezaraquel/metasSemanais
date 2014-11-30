@@ -1,60 +1,125 @@
 @(message: String)
 
+<!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <title>Organize suas metas</title>
-        <meta charset="UTF-8">
-        <meta name=viewport content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- Bootstrap CSS -->
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Organize suas metas semanais</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!-- Bootstrap CSS -->
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        
-    </head>
-    <body>
-    	<div class="col-md-3">
-    		<div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary">
-    			<ul class="nav bs-docs-sidenav">
-    				<li><a href="#semana1">Semana 1</a></li>
-    				<li><a href="#semana2">Semana 2</a></li>
-    				<li><a href="#semana3">Semana 3</a></li>
-    				<li><a href="#semana4">Semana 4</a></li>
-    				<li><a href="#semana5">Semana 5</a></li>
-    				<li><a href="#semana6">Semana 6</a></li>
-    			</ul>
-    		</div>
-    	</div>
-    	
-    	<div class="col-md-4" align="center">
-    		<div id="semana1">
-    			<h1>Semana 1<h1>
-    		</div>
-    		<div id="semana2">
-    			<h1>Semana 2<h1>
-    		</div>
-    		<div id="semana3">
-    			<h1>Semana 3<h1>
-    		</div>
-    		<div id="semana4">
-    			<h1>Semana 4<h1>
-    		</div>
-    		<div id="semana5">
-    			<h1>Semana 5<h1>
-    		</div>
-    		<div id="semana6">
-    			<h1>Semana 6<h1>
-    		</div>
-    	</div>
-    	
-    	<div class="col-md-5">
-    	</div>
-    
-    
-    
-   		<!-- jQuery -->
-        <script src="http://code.jquery.com/jquery.js"></script>
-        <!-- Bootstrap JavaScript -->
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    </body>
-    
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/styles.css")">
+		
+		<script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
+	</head>
+	<body>
+<!-- Header -->
+<div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Minhas Metas Semanais</a>
+    </div>    
+  </div><!-- /container -->
+</div>
+<!-- /Header -->
+
+<!-- Main -->
+<div class="container-fluid">
+<div class="row">
+	<div class="col-sm-3">
+      <!-- Left column -->
+      <a href="#"><strong><i class="glyphicon glyphicon-book"></i> Semanas</strong></a>  
+      
+      <hr>
+      
+      <ul class="list-unstyled collapse in" id="userMenu">
+                <li class="active"><a href="#semana1"><i class="glyphicon glyphicon-list-alt"></i> Semana 1</a></li>
+                <hr></hr>
+                <li><a href="#semana2"><i class="glyphicon glyphicon-list-alt"></i> Semana 2</a></li>
+                <hr></hr>
+                <li><a href="#semana3"><i class="glyphicon glyphicon-list-alt"></i> Semana 3</a></li> 
+                <hr></hr>
+                <li><a href="#semana4"><i class="glyphicon glyphicon-list-alt"></i> Semana 4</a></li>
+                <hr></hr>
+                <li><a href="#semana5"><i class="glyphicon glyphicon-list-alt"></i> Semana 5</a></li>
+                <hr></hr>
+                <li><a href="#semana6"><i class="glyphicon glyphicon-list-alt"></i> Semana 6</a></li>
+      </ul>
+      
+  	</div><!-- /col-3 -->
+    <div class="col-sm-9">
+      	
+      <!-- column 2 -->	
+      <ul class="list-inline pull-right">
+         <li><a href="#"><i class="glyphicon glyphicon-wrench"></i> Criar Metas</a></li>
+      </ul>
+      <a href="#"><strong><i class="glyphicon glyphicon-star"></i> Minhas Metas</strong></a>  
+      
+      	<hr>
+      
+		<div class="row">
+           
+            
+          
+            <!-- center left-->	
+         	<div class="col-md-6">
+			  <div class="well" id="semana1">Semana 1</div>
+			  <div class="well" id="semana2">Semana 2</div>
+			  <div class="well" id="semana3">Semana 3</div>
+			  <div class="well" id="semana4">Semana 4</div>
+			  <div class="well" id="semana5">Semana 5</div>
+			  <div class="well" id="semana6">Semana 6</div>
+              
+              
+   
+          	</div><!--/col-->
+        	<div class="col-md-6">
+				<div class="well"> 
+					<form class="form">
+						<h4>Nova Meta</h4>
+						<div>
+							<label>Nome</label>
+							<input type="text" class="form-control input-lg" title="Dê um nome à sua meta." placeholder="Digite o nome da meta"/>
+						</div>						
+						<div>
+							<label>Descrição</label>
+							<input type="text" class="form-control input-lg" title="Descreva sua meta." placeholder="Digite uma descrição"/>
+						</div>
+						<div>
+							<label>Prioridade</label>
+							<input type="number" class="form-control input-lg" title="Qual a prioridade?." placeholder="Qual a importância da meta?"/>
+						</div>
+						<div>
+							<label>Semana</label>
+							<input type="number" class="form-control input-lg" title="Semana da meta." placeholder="Semana que alcançará a meta"/>
+						</div>
+						<hr></hr>
+						<div align="center">
+							<input type="submit" class="btn btn-success" value="Criar Meta"/>
+						</div>
+					</form>
+				</div><!--/well-->
+			</div><!--/col-span-6--> 
+			
+      </div><!--/row-->
+  	</div><!--/col-span-9-->
+</div>
+</div>
+<!-- /Main -->
+ 
+	<!-- jQuery -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	</body>
 </html>
