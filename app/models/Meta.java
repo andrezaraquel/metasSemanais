@@ -1,19 +1,29 @@
 package models;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 public class Meta implements Comparable<Meta>{
 
+	@Id
+	@GeneratedValue
+	private long id;
 	private String nome, descricao;
 	private int prioridade;
-	private Semana semana;
+	private String semana;
 	
 	
-	public Meta(String nome, String descricao, int prioridade, Semana semana){
+	public Meta(String nome, String descricao, int prioridade, String semana){
 		this.nome = nome;
 		this.descricao = descricao;
 		this.prioridade =  prioridade;
 		this.semana = semana;
 	}
 
+	public long getId(){
+		return id;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
@@ -38,11 +48,11 @@ public class Meta implements Comparable<Meta>{
 		this.prioridade = prioridade;
 	}
 	
-	public Semana getSemana() {
+	public String getSemana() {
 		return semana;
 	}
 
-	public void setSemana(Semana semana) {
+	public void setSemana(String semana) {
 		this.semana = semana;
 	}
 

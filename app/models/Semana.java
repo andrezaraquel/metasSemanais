@@ -29,6 +29,10 @@ public class Semana {
 		return metas;
 	}
 	
+	public int numeroDeMetasNaSemana(){
+		return metas.size();
+	}
+	
 	public void addMeta(Meta meta){
 		metas.add(meta);
 		Collections.sort(this.getMetas());
