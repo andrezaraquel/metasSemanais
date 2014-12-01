@@ -78,10 +78,14 @@
 			  <div class="well" id="semana1">
 			  	<h4>Semana 1</h4>
 			  	 @if(!semanas.isEmpty() && semanas.get(0).isEmpty()){
-				        Nenhuma meta foi cadastrada.
+				        <table><tr><td>Nenhuma meta cadastrada.</td></tr></table>
 				    }else{
-				    	<table id= "tarefasSemana1">
-				    	<tr><th colspan="2"><div align="center">Total: @semanas.get(0).numeroDeMetasNaSemana()</div></th></tr>
+				    		<div align="center">Metas Alcançadas: @semanas.get(0).numeroDeMetasAlcancadas()</div>
+				    		<div align="center">Metas Não Alcançadas: @semanas.get(0).numeroDeMetasNaoAlcancadas()</div>
+				    		<div align="center">Total: @semanas.get(0).numeroDeMetasNaSemana()</div>				    		
+				    	
+				    	<table>
+				    	<thead><tr><th colspan="3"><div align="center">Minhas Metas</div></th><tr></thead>
 				    	<tbody>
 					    @if(!semanas.isEmpty() && !semanas.get(0).isEmpty()){
 					        
@@ -92,7 +96,8 @@
 											Descrição: @meta.getDescricao()<br>
 											Prioridade: @meta.getPrioridade()
 										</td>
-										<td><div align="center"><buttonDelete class="btn btn-danger buttonDelete" id=@meta.getId()>Deletar</button></div></td>
+										<td><div align="center"><button class="btn btn-danger buttonDelete" id=@meta.getId()>Deletar</button></div></td>
+										<td><div align="center"><div align="center" class="imgMetaRealizada"><img src="@routes.Assets.at("images/metaRealizada.png")"  class="imgMetaRealizada" id=@meta.ehMetaAlcancada()/></div></div></td>
 									</tr>
 								}				        
 					    }
@@ -106,10 +111,14 @@
 			  <div class="well" id="semana2">
 			  	<h4>Semana 2</h4>
 			  	 @if(!semanas.isEmpty() && semanas.get(1).isEmpty()){
-				        Nenhuma meta foi cadastrada.
+				        <table><tr><td>Nenhuma meta cadastrada.</td></tr></table>
 				    }else{
-				    	<table id= "tarefasSemana1">
-				    	<tr><th colspan="2"><div align="center">Total: @semanas.get(1).numeroDeMetasNaSemana()</div></th></tr>
+				    	<div align="center">Metas Alcançadas: @semanas.get(0).numeroDeMetasAlcancadas()</div>
+				    		<div align="center">Metas Não Alcançadas: @semanas.get(0).numeroDeMetasNaoAlcancadas()</div>
+				    		<div align="center">Total: @semanas.get(0).numeroDeMetasNaSemana()</div>				    		
+				    	
+				    	<table>
+				    	<thead><tr><th colspan="3"><div align="center">Minhas Metas</div></th><tr></thead>
 				    	<tbody>
 					    @if(!semanas.isEmpty() && !semanas.get(1).isEmpty()){
 					        
@@ -121,8 +130,9 @@
 											Prioridade: @meta.getPrioridade()
 										</td>
 										<td><div align="center"><button class="btn btn-danger buttonDelete" id=@meta.getId()>Deletar</button></div></td>
+										<td><div align="center"><div align="center" class="imgMetaRealizada"><img src="@routes.Assets.at("images/metaRealizada.png")"  class="imgMetaRealizada" id=@meta.ehMetaAlcancada()/></div></div></td>
 									</tr>
-								}				        
+								}			        
 					    }
 					    </tbody>
 					    </table>
@@ -132,10 +142,14 @@
 			  <div class="well" id="semana3">
 			  	<h4>Semana 3</h4>
 			  	 @if(!semanas.isEmpty() && semanas.get(2).isEmpty()){
-				        Nenhuma meta foi cadastrada.
+				        <table><tr><td>Nenhuma meta cadastrada.</td></tr></table>
 				    }else{
-				    	<table id= "tarefasSemana1">
-				    	<tr><th colspan="2"><div align="center">Total: @semanas.get(2).numeroDeMetasNaSemana()</div></th></tr>
+				    	<div align="center">Metas Alcançadas: @semanas.get(0).numeroDeMetasAlcancadas()</div>
+				    		<div align="center">Metas Não Alcançadas: @semanas.get(0).numeroDeMetasNaoAlcancadas()</div>
+				    		<div align="center">Total: @semanas.get(0).numeroDeMetasNaSemana()</div>				    		
+				    	
+				    	<table>
+				    	<thead><tr><th colspan="3"><div align="center">Minhas Metas</div></th><tr></thead>
 				    	<tbody>
 					    @if(!semanas.isEmpty() && !semanas.get(2).isEmpty()){
 					        
@@ -147,6 +161,7 @@
 											Prioridade: @meta.getPrioridade()
 										</td>
 										<td><div align="center"><button class="btn btn-danger buttonDelete" id=@meta.getId()>Deletar</button></div></td>
+										<td><div align="center"><div align="center" class="imgMetaRealizada"><img src="@routes.Assets.at("images/metaRealizada.png")"  class="imgMetaRealizada" id=@meta.ehMetaAlcancada()/></div></div></td>
 									</tr>
 								}				        
 					    }
@@ -158,10 +173,14 @@
 			  <div class="well" id="semana4">
 			  	<h4>Semana 4</h4>
 			  	 @if(!semanas.isEmpty() && semanas.get(3).isEmpty()){
-				        Nenhuma meta foi cadastrada.
+				        <table><tr><td>Nenhuma meta cadastrada.</td></tr></table>
 				    }else{
-				    	<table id= "tarefasSemana1">
-				    	<tr><th colspan="2"><div align="center">Total: @semanas.get(3).numeroDeMetasNaSemana()</div></th></tr>
+				    	<div align="center">Metas Alcançadas: @semanas.get(0).numeroDeMetasAlcancadas()</div>
+				    		<div align="center">Metas Não Alcançadas: @semanas.get(0).numeroDeMetasNaoAlcancadas()</div>
+				    		<div align="center">Total: @semanas.get(0).numeroDeMetasNaSemana()</div>				    		
+				    	
+				    	<table>
+				    	<thead><tr><th colspan="3"><div align="center">Minhas Metas</div></th><tr></thead>
 				    	<tbody>
 					    @if(!semanas.isEmpty() && !semanas.get(3).isEmpty()){
 					        
@@ -173,8 +192,9 @@
 											Prioridade: @meta.getPrioridade()
 										</td>
 										<td><div align="center"><button class="btn btn-danger buttonDelete" id=@meta.getId()>Deletar</button></div></td>
+										<td><div align="center"><div align="center" class="imgMetaRealizada"><img src="@routes.Assets.at("images/metaRealizada.png")"  class="imgMetaRealizada" id=@meta.ehMetaAlcancada()/></div></div></td>
 									</tr>
-								}				        
+								}			        
 					    }
 					    </tbody>
 					    </table>
@@ -184,10 +204,14 @@
 			  <div class="well" id="semana5">
 			  	<h4>Semana 5</h4>
 			  	 @if(!semanas.isEmpty() && semanas.get(4).isEmpty()){
-				        Nenhuma meta foi cadastrada.
+				        <table><tr><td>Nenhuma meta cadastrada.</td></tr></table>
 				    }else{
-				    	<table id= "tarefasSemana1">
-				    	<tr><th colspan="2"><div align="center">Total: @semanas.get(4).numeroDeMetasNaSemana()</div></th></tr>
+				    	<div align="center">Metas Alcançadas: @semanas.get(0).numeroDeMetasAlcancadas()</div>
+				    		<div align="center">Metas Não Alcançadas: @semanas.get(0).numeroDeMetasNaoAlcancadas()</div>
+				    		<div align="center">Total: @semanas.get(0).numeroDeMetasNaSemana()</div>				    		
+				    	
+				    	<table>
+				    	<thead><tr><th colspan="3"><div align="center">Minhas Metas</div></th><tr></thead>
 				    	<tbody>
 					    @if(!semanas.isEmpty() && !semanas.get(4).isEmpty()){
 					        
@@ -199,8 +223,9 @@
 											Prioridade: @meta.getPrioridade()
 										</td>
 										<td><div align="center"><button class="btn btn-danger buttonDelete" id=@meta.getId()>Deletar</button></div></td>
+										<td><div align="center"><div align="center" class="imgMetaRealizada"><img src="@routes.Assets.at("images/metaRealizada.png")"  class="imgMetaRealizada" id=@meta.ehMetaAlcancada()/></div></div></td>
 									</tr>
-								}				        
+								}			        
 					    }
 					    </tbody>
 					    </table>
@@ -210,10 +235,14 @@
 			  <div class="well" id="semana6">
 			  	<h4>Semana 6</h4>
 			  	 @if(!semanas.isEmpty() && semanas.get(5).isEmpty()){
-				        Nenhuma meta foi cadastrada.
+				        <table><tr><td>Nenhuma meta cadastrada.</td></tr></table>
 				    }else{
-				    	<table id= "tarefasSemana1">
-				    	<tr><th colspan="2"><div align="center">Total: @semanas.get(5).numeroDeMetasNaSemana()</div></th></tr>
+				    	<div align="center">Metas Alcançadas: @semanas.get(0).numeroDeMetasAlcancadas()</div>
+				    		<div align="center">Metas Não Alcançadas: @semanas.get(0).numeroDeMetasNaoAlcancadas()</div>
+				    		<div align="center">Total: @semanas.get(0).numeroDeMetasNaSemana()</div>				    		
+				    	
+				    	<table>
+				    	<thead><tr><th colspan="3"><div align="center">Minhas Metas</div></th><tr></thead>
 				    	<tbody>
 					    @if(!semanas.isEmpty() && !semanas.get(5).isEmpty()){
 					        
@@ -225,6 +254,7 @@
 											Prioridade: @meta.getPrioridade()
 										</td>
 										<td><div align="center"><button class="btn btn-danger buttonDelete" id=@meta.getId()>Deletar</button></div></td>
+										<td><div align="center"><div align="center" class="imgMetaRealizada"><img src="@routes.Assets.at("images/metaRealizada.png")"  class="imgMetaRealizada" id=@meta.ehMetaAlcancada()/></div></div></td>
 									</tr>
 								}				        
 					    }

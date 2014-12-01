@@ -33,6 +33,20 @@ public class Semana {
 		return metas.size();
 	}
 	
+	public int numeroDeMetasAlcancadas(){
+		int count = 0;
+		for(int i = 0; i < metas.size(); i++){
+			if(metas.get(i).ehMetaAlcancada()){
+				count ++;
+			}
+		}
+		return count;
+	}
+	
+	public int numeroDeMetasNaoAlcancadas(){
+		return metas.size() - numeroDeMetasAlcancadas();
+	}
+	
 	public void addMeta(Meta meta){
 		metas.add(meta);
 		Collections.sort(this.getMetas());

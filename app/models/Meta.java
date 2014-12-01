@@ -10,14 +10,14 @@ public class Meta implements Comparable<Meta>{
 	private long id;
 	private String nome, descricao;
 	private int prioridade;
-	private String semana;
+	private boolean metaAlcancada;
 	
 	
-	public Meta(String nome, String descricao, int prioridade, String semana){
+	public Meta(String nome, String descricao, int prioridade){
 		this.nome = nome;
 		this.descricao = descricao;
 		this.prioridade =  prioridade;
-		this.semana = semana;
+		this.metaAlcancada = false;
 	}
 
 	public long getId(){
@@ -47,16 +47,15 @@ public class Meta implements Comparable<Meta>{
 	public void setPrioridade(int prioridade) {
 		this.prioridade = prioridade;
 	}
+
+	public void marcaMetaComoAlcancada(){
+		this.metaAlcancada =  true;
+	}
+
+	public boolean ehMetaAlcancada(){
+		return this.metaAlcancada;
+	}
 	
-	public String getSemana() {
-		return semana;
-	}
-
-	public void setSemana(String semana) {
-		this.semana = semana;
-	}
-
-
 	@Override
 	public int compareTo(Meta meta) {
 		if (this.getPrioridade() < meta.getPrioridade()){

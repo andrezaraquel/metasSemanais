@@ -22,7 +22,7 @@ public class OrganizadorDeMetas {
 	}
 
 	public void criarMeta(String nome, String descricao, int prioridade, String semana){
-		Meta novaMeta = new Meta(nome, descricao, prioridade, semana);
+		Meta novaMeta = new Meta(nome, descricao, prioridade);
 		switch(semana){
 			case "Semana 1":				
 				semanas.get(0).addMeta(novaMeta);
