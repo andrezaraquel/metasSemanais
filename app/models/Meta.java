@@ -48,8 +48,12 @@ public class Meta implements Comparable<Meta>{
 		this.prioridade = prioridade;
 	}
 
-	public void marcaMetaComoAlcancada(){
-		this.metaAlcancada =  true;
+	public void marcarMeta(){
+		if(this.metaAlcancada){
+			this.metaAlcancada =  false;
+		} else {
+			this.metaAlcancada =  true;
+		}		
 	}
 
 	public boolean ehMetaAlcancada(){

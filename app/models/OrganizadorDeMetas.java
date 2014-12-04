@@ -46,9 +46,7 @@ public class OrganizadorDeMetas {
 				semanas.get(0).addMeta(novaMeta);
 				break;
 				
-		}
-			
-				
+		}				
 	}
 	
 	public List<Semana> getSemanas(){

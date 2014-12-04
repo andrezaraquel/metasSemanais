@@ -32,17 +32,26 @@ public class Application extends Controller {
 
     }
     
-    public static Result deletarMeta(long idMeta){
-    	
+    public static Result marcarMetaAlcancada(String nomeMeta){    	
     	for(int i = 0; i < organizador.getNumSemanas(); i++){
     		for(int j = 0; j < organizador.getSemanas().get(i).numeroDeMetasNaSemana(); j++ ){
-    			if(idMeta == organizador.getSemanas().get(i).getMetas().get(j).getId()){
-    				organizador.getSemanas().get(i).getMetas().remove(j);				
+    			if(nomeMeta.equals(organizador.getSemanas().get(i).getMetas().get(j).getNome())){
+    				organizador.getSemanas().get(i).getMetas().get(j).marcarMeta();				
     			}
     		}    		
     	}
-    	
     	return index();
+    }
+    
+    public static Result deletarMeta(String nomeMeta){
     	
+    	for(int i = 0; i < organizador.getNumSemanas(); i++){
+    		for(int j = 0; j < organizador.getSemanas().get(i).numeroDeMetasNaSemana(); j++ ){
+    			if(nomeMeta.equals(organizador.getSemanas().get(i).getMetas().get(j).getNome())){
+    				organizador.getSemanas().get(i).getMetas().remove(j);				
+    			}
+    		}    		
+    	}    	
+    	return index();    	
     }
 }
