@@ -2,16 +2,30 @@ package models;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
 public class Semana {
 
+	@Id
+	@GeneratedValue
+	private Long id;
 	private String nome;
-	ArrayList<Meta> metas;
+	@OneToMany
+	private List<Meta> metas;
+	
+	public Semana() {
+		metas = new ArrayList<Meta>();	
+	}
 	
 	public Semana(String nome){
+		this();
 		this.nome = nome;
-		metas = new ArrayList<Meta>();
-		
 	}
 	
 	public boolean isEmpty(){
@@ -25,7 +39,7 @@ public class Semana {
 		return nome;
 	}
 
-	public ArrayList<Meta> getMetas() {
+	public List<Meta> getMetas() {
 		return metas;
 	}
 	

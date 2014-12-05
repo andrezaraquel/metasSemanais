@@ -1,8 +1,10 @@
 package models;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Entity
 public class Meta implements Comparable<Meta>{
 
 	@Id
@@ -12,6 +14,9 @@ public class Meta implements Comparable<Meta>{
 	private int prioridade;
 	private boolean metaAlcancada;
 	
+	public Meta() {
+		
+	}
 	
 	public Meta(String nome, String descricao, int prioridade){
 		this.nome = nome;
