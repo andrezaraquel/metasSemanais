@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import scala.util.control.Exception;
+
 @Entity
-public class Meta implements Comparable<Meta>{
+public class Meta implements Comparable<Meta> {
 
 	@Id
 	@GeneratedValue

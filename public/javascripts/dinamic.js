@@ -26,18 +26,8 @@ function marcaCheckbox(){
 function marcarMeta(){
 	$("table > tbody > tr > td > :checkbox").click(function(){	
 	
-		var nomeMeta = $(this).attr("value");	
-		var tr = $(this).parent().parent();
-				
-		if($(this).is(':checked')){			
-			
-			$(tr).addClass("metaAlcancada");
-			
-			
-		} else {
-			$(tr).removeClass("metaAlcancada");
-		}
-		
+		var nomeMeta = $(this).attr("value");
+						
 		$.ajax({
 			    url: "/marcarMeta/"+nomeMeta,
 			    type: "POST"
